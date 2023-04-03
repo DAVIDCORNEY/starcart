@@ -29,8 +29,7 @@ export const favesSlice = createSlice({
 			// return state
 		},
 		removeFave: (state, action) => {
-			// const id = action.payload
-			console.log('faves', current(state))
+			return state = state.filter(({id}) => id !== action.payload)
 			/*
 			 ! remove fave code here */
 			/*
