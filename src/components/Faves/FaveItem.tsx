@@ -1,9 +1,10 @@
- import { Button, List, Rating, } from 'semantic-ui-react'
-
+ import { Button, List, Rating } from 'semantic-ui-react'
+ import { FaveItemObj, handleRating, handleRemove } from './types'
+ 
  interface Props{
-	 fave:any;
-	 handleRating:any;
-	 handleRemove:any;
+	 fave:FaveItemObj;
+	 handleRating:handleRating;
+	 handleRemove:handleRemove;
  }
 
 const FaveItem = ({ fave, handleRating, handleRemove }:Props) => (
