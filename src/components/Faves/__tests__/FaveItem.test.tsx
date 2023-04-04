@@ -22,7 +22,7 @@ describe('FaveItem', () => {
     });
         
     it('should display the delete button and call handleRemove on click', () => {
-        fireEvent.click(screen.getByTestId('delete-fav'));
+        fireEvent.click(screen.getByTestId('delete-fave'));
         expect(handleRemove).toHaveBeenCalledTimes(1);
     });
     

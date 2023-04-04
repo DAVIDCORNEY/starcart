@@ -68,7 +68,7 @@ const Characters = () => {
 			</>
 		)
 	} else if (data?.results?.length === 0) {
-		return <Message warning>no films found</Message>
+		return <Message warning>no characters found</Message>
 	}
 	return null
 }
