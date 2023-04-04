@@ -51,16 +51,19 @@ const Characters = () => {
 						</Card>
 					))}
 				</Card.Group>
-				<div class="ui container center aligned">
-					<Pagination
-						defaultActivePage={1}
-						boundaryRange={0}
-						firstItem={null}
-						lastItem={null}
-						totalPages={numberOfPages}
-						ellipsisItem={null}
-						onPageChange={onChange}
-					/>
+				<div class="row">
+					<div class="column" align="middle">
+						<Pagination 
+							style={{"margin-top": "1rem"}}
+							defaultActivePage={1}
+							boundaryRange={0}
+							firstItem={null}
+							lastItem={null}
+							totalPages={numberOfPages}
+							ellipsisItem={null}
+							onPageChange={onChange}
+						/>
+					</div>
 				</div>
 			</>
 		)
