@@ -51,10 +51,10 @@ const Characters = () => {
 						</Card>
 					))}
 				</Card.Group>
-				<div class="row">
-					<div class="column" align="middle">
+				<div className="row">
+					<div className="column" align="middle">
 						<Pagination 
-							style={{"margin-top": "1rem"}}
+							style={{"marginTop": "1rem"}}
 							defaultActivePage={1}
 							boundaryRange={0}
 							firstItem={null}
