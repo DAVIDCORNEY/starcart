@@ -1,9 +1,9 @@
 import { SyntheticEvent } from 'react'
 import { useDispatch } from 'react-redux'
 import { RatingProps } from 'semantic-ui-react'
-import { removeFave } from '../../features/faves'
+import { removeFave, rateFave } from '../../features/faves'
 import FaveItem from './FaveItem'
-import { FaveItemObj } from './types'
+import { FaveItemObj, RateFaveObj } from './types'
 
 const FaveContainer = ({ fave }:{fave:FaveItemObj}) => {
 	const dispatch = useDispatch()
@@ -13,8 +13,15 @@ const FaveContainer = ({ fave }:{fave:FaveItemObj}) => {
 	const handleRating = (_e:SyntheticEvent, data:RatingProps) => {
 		/* 
 	? set a rating
-	*/ console.log('rating data ', data)
+	*/ 
+	const RateFavePayload: RateFaveObj = { 
+		faveId: fave.id,
+		rating:data.rating, 
 	}
+
+	dispatch(rateFave(RateFavePayload));
+	}
+
 	const handleRemove = () => {
 		/* 
 	 ? remove the Fave from the list here:

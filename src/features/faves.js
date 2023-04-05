@@ -29,12 +29,21 @@ export const favesSlice = createSlice({
 			// return state
 		},
 		rateFave: (state, action) => {
+			const {faveId, rating} = action.payload;
 			// find fave
+			const fave = state.find(({id}) => id === faveId);
 			// update new on that fave
+			const ratedFave = {...fave,rating};
 			// return state
+			return state.map(fave => {
+				if(fave.id === faveId) {
+					return ratedFave;
+				}
+				return fave;
+			});
 		},
 		removeFave: (state, action) => {
-			return state = state.filter(({id}) => id !== action.payload)
+			return state.filter(({id}) => id !== action.payload)
 			/*
 			 ! remove fave code here */
 			/*
